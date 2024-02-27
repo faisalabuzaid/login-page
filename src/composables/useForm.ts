@@ -32,21 +32,11 @@ export default function useForm(options: UseFormOptions) {
 
     const handleSubmit = (event: Event) => {
         event.preventDefault();
-        validateForm;
-        resetForm;
+        validateForm();
 
         if (Object.values(formErrors).every((error) => !error)) {
             options.onSubmit(formValues.value);
         }
-    };
-
-    const resetForm = () => {
-        Object.keys(formValues).forEach((key) => {
-            formValues.value[key].value = '';
-            formValues.value[key].error = null;
-        });
-
-        formErrors.value = {};
     };
 
     return {

@@ -34,7 +34,7 @@ export default function useForm(options: UseFormOptions) {
         event.preventDefault();
         validateForm();
 
-        if (Object.values(formErrors).every((error) => !error)) {
+        if (Object.values(formErrors.value).every((error) => !error)) {
             options.onSubmit(formValues.value);
         }
     };

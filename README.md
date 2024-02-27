@@ -1,27 +1,23 @@
-# login-page-assigment
+# Login Page Assignment
 
-This template should help get you started developing with Vue 3 in Vite.
+This project includes a Vue.js 3 component for a login page, designed as part of an assignment. The component provides a customizable and reusable login form with support for various input types, labels, required fields, and error messages.
 
-## Recommended IDE Setup
+## Table of Contents
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- [Features](#features)
+- [Installation](#installation)
+- [Components Details](#component-details)
+- [Styling](#styling)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Type Support for `.vue` Imports in TS
+## Features
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- Support for different input types: text, password, number, email.
+- Customizable labels, required fields, and error messages.
+- Responsive design for a seamless user experience.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Installation
 
 ```sh
 npm install
@@ -44,3 +40,26 @@ npm run build
 ```sh
 npm run lint
 ```
+
+## Component-Details
+
+### The input component (BaseInput) accepts the following props:
+
+- type: Input type ('password' | 'text' | 'number' | 'email').
+- modelValue: Two-way binding for the input value.
+- label: Label for the input field.
+- id: HTML id attribute for the input field.
+- required: Boolean, indicating whether the input is required.
+- error: Error message to display.
+
+### The login component (BaseLogin)
+
+- Form, base inputs and a button.
+
+## Styling
+
+The component comes with scoped styles to ensure a consistent and visually appealing appearance. Styles include responsive design, error handling, and focused label animations.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
